@@ -1,0 +1,35 @@
+spring:  
+  jpa:
+    show-sql: true    
+  profiles:
+     active: oauth-security
+  jackson:
+    date-format: yyyy-MM-dd
+    deserialization:
+      fail-on-unknown-properties: true
+
+---
+
+registrodebancos:
+   bancos:
+     - 
+       name: BD_SOFTHOUSE
+       default: true
+       url: jdbc:mysql://localhost:3306/contas?useSSL=false
+       username: root
+       password: root
+       driver-class-name: com.mysql.jdbc.Driver
+     - 
+       name: AMZ_00.000.000.0000.00
+       default: false
+       url: jdbc:mysql://localhost:3306/contas_001?useSSL=false
+       username: root
+       password: root
+       driver-class-name: com.mysql.jdbc.Driver    
+     - 
+       name: contas_002
+       default: false
+       url: jdbc:mysql://localhost:3306/contas_002?useSSL=false
+       username: root
+       password: root
+       driver-class-name: com.mysql.jdbc.Driver  
